@@ -4,11 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap w/ Vite</title>
+    <link rel="stylesheet" href="./css/styles.css">
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
+    <!-- Sales -->
+    <div class="sale-top mx-auto py-0 text-center bg-success w-100 my-0 text-white ">
+        <h4 class="bs-body-bg">🔥 БОЛЬШИЕ СКИДКИ ДО 67 % 🔥</h4>
+    </div>
 
-    <div class="container mx-auto py-0">
+
+    <!-- Navbar -->
+    <div class="search mx-auto py-0 my-0">
         <nav class="navbar navbar-expand-lg bg-warning mx-auto">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Навбар</a>
@@ -34,9 +41,6 @@
                         <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
                     </ul>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link disabled">Отключенная</a>
-                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
@@ -47,62 +51,120 @@
         </nav>
     </div>
 
-    <div class="container py-4 px-3 mx-auto bg-warning-subtle text-center">
-      <h1 class="bs-light">Hello, Bootstrap and Vite!</h1>
-      <button class="btn btn-warning">warning button</button>
 
-      <div class="row py-1">
-        <div class="col-12 border bg-primary text-center">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Запустите демо модального окна
-            </button>
+    <!-- Banner -->
+    <section class="mb-5">
+        <div class="container py-4 px-3 mx-auto text-black">
+        <div class="container py-5">
+        <h1 class="display-4 fw-bold"><i class="bi bi-stars me-3"></i>Лучшее предложение 2026 года</h1>
+        <p class="lead fs-4">Получите скидку до 40% при заказе до 28 февраля</p>
+        <button class="btn btn-light btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#successModal">
+            <i class="bi bi-cart-check-fill me-2"></i>Заказать сейчас
+        </button>
         </div>
-        <div class="col-12 col-md-6 border bg-primary text-center">Колонка</div>
-        <div class="col-12 col-md-6 col-lg-3 border bg-primary text-center">Колонка</div>
-        <div class="col-12 col-lg-3 border bg-primary text-center">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                Запустите демо модального окна
-            </button>
+    </section>
+
+
+    <!-- Main magazine -->
+    <h1 class="mb-4 text-center">Ассортимент</h1>
+    <section class="tovars container mx-auto mb-5 row row-cols-1 row-cols-md-3 g-2 justify-content-between">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Go somewhere</a>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Why Us -->
+    <div class="container accordion accordion-flush mb-5" id="accordionFlushExample">
+    <h2 class="mb-3">Частые вопросы</h2>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            У вас безопасная продукция?
+        </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
         </div>
-      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            С вами возможно связаться как-либо, кроме сайта?
+        </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Где изготавливается ваша продукция?
+        </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+        </div>
+    </div>
     </div>
 
-    <!-- modal window -->
+
+    <!-- User message -->
+    <div class="message mx-auto py-0 bg-black mx-auto px-5 py-2">
+        <h2 class="mb-3 text-white">Свяжитесь с нами!</h2>
+        <div class="mb-3 text-white">
+            <label for="exampleFormControlInput1" class="form-label">Ваша почта</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 text-white">
+            <label for="exampleFormControlTextarea1" class="form-label">Ваше сообщение</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение..."></textarea>
+        </div>
+        <div class="mb-3 text-white align-items-end">
+            <button class="btn btn-primary">Отправить</button>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Заголовок модального окна</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body">
-                i am a modal window!
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-primary">Сохранить изменения</button>
-            </div>
-            </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ошибка!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Ваше текущее местоположение не позволяет оформить заказ. <br> Попробуйте отключить прокси-сервисы и VPN.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Обратиться в поддержку</button>
+        </div>
         </div>
     </div>
-
-    <!-- modal window second -->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Модальное окно 2</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body">
-                i am a second modal window!
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-primary">Сохранить изменения</button>
-            </div>
-            </div>
-        </div>
     </div>
   </body>
 </html>
