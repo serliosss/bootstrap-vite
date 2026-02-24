@@ -1,170 +1,259 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap w/ Vite</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script type="module" src="./js/main.js"></script>
+    <title>GamerShop - Магазин приставок</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   </head>
   <body>
-    <!-- Sales -->
-    <div class="sale-top mx-auto py-0 text-center bg-success w-100 my-0 text-white ">
-        <h4 class="bs-body-bg">🔥 БОЛЬШИЕ СКИДКИ ДО 67 % 🔥</h4>
+    <!-- Sales Banner -->
+    <div class="bg-danger py-2 text-center text-white">
+      <div class="container">
+        <p class="mb-0 fw-bold">Скидки до 67% на игровые приставки</p>
+      </div>
     </div>
-
 
     <!-- Navbar -->
-    <div class="search mx-auto py-0 my-0">
-        <nav class="navbar navbar-expand-lg bg-warning mx-auto">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Навбар</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Ссылка</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Выпадающий список
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Действие</a></li>
-                        <li><a class="dropdown-item" href="#">Другое действие</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-                    <button class="btn btn-outline-success" type="submit">Поиск</button>
-                </form>
-                </div>
-            </div>
-        </nav>
-    </div>
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          GamerShop
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Консоли</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Аксессуары</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Игры</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Поиск...">
+            <button class="btn btn-outline-primary" type="submit">Найти</button>
+          </form>
+          <a href="#" class="btn btn-primary ms-3">
+            Корзина
+          </a>
+        </div>
+      </div>
+    </nav>
 
     <!-- Banner -->
-    <section class="mb-5">
-        <div class="container py-4 px-3 mx-auto text-black">
-        <div class="container py-5">
-        <h1 class="display-4 fw-bold"><i class="bi bi-stars me-3"></i>Лучшее предложение 2026 года</h1>
-        <p class="lead fs-4">Получите скидку до 40% при заказе до 28 февраля</p>
-        <button class="btn btn-light btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#successModal">
-            <i class="bi bi-cart-check-fill me-2"></i>Заказать сейчас
+    <div class="container mt-4 mb-5">
+      <div class="bg-primary text-white p-4">
+        <h1>Игровые приставки нового поколения</h1>
+        <p class="lead">Получите PlayStation 5, Xbox Series X или Nintendo Switch со скидкой до 40%</p>
+        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#orderModal">
+          Купить сейчас
         </button>
-        </div>
-    </section>
+      </div>
+    </div>
 
-
-    <!-- Main magazine -->
-    <h1 class="mb-4 text-center">Ассортимент</h1>
-    <section class="tovars container mx-auto mb-5 row row-cols-1 row-cols-md-3 g-2 justify-content-between">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Go somewhere</a>
-                </div>
+    <!-- Products -->
+    <div class="container mb-5">
+      <h2 class="text-center mb-4">Популярные игровые консоли</h2>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="badge bg-danger">-30%</span>
+              <h4 class="card-title">PlayStation 5</h4>
+              <p class="card-text">Консоль нового поколения с SSD, поддержкой 4K.</p>
+              <ul class="list-unstyled">
+                <li>825 ГБ SSD</li>
+                <li>4K Blu-ray</li>
+                <li>DualSense контроллер</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="text-primary mb-0">59 999₽</h5>
+                <s class="text-muted">79 999₽</s>
+              </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Go somewhere</a>
-                </div>
+            <div class="card-footer">
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#orderModal">
+                В корзину
+              </button>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Go somewhere</a>
-                </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="badge bg-danger">-25%</span>
+              <h4 class="card-title">Xbox Series X</h4>
+              <p class="card-text">Мощная консоль с игровой библиотекой Game Pass.</p>
+              <ul class="list-unstyled">
+                <li>1 ТБ SSD</li>
+                <li>4K при 60 FPS</li>
+                <li>Game Pass Ultimate</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="text-primary mb-0">54 999₽</h5>
+                <s class="text-muted">69 999₽</s>
+              </div>
             </div>
-    </section>
-
-
-    <!-- Why Us -->
-    <div class="container accordion accordion-flush mb-5" id="accordionFlushExample">
-    <h2 class="mb-3">Частые вопросы</h2>
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            У вас безопасная продукция?
-        </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+            <div class="card-footer">
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#orderModal">
+                В корзину
+              </button>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            С вами возможно связаться как-либо, кроме сайта?
-        </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+        
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="badge bg-danger">-20%</span>
+              <h4 class="card-title">Nintendo Switch OLED</h4>
+              <p class="card-text">Гибридная консоль для игры дома и в пути.</p>
+              <ul class="list-unstyled">
+                <li>7" OLED экран</li>
+                <li>Режим TV/Handheld</li>
+                <li>64 ГБ памяти</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="text-primary mb-0">27 999₽</h5>
+                <s class="text-muted">34 999₽</s>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#orderModal">
+                В корзину
+              </button>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            Где изготавливается ваша продукция?
-        </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-        </div>
-    </div>
+      </div>
     </div>
 
-
-    <!-- User message -->
-    <div class="message mx-auto py-0 bg-black mx-auto px-5 py-2">
-        <h2 class="mb-3 text-white">Свяжитесь с нами!</h2>
-        <div class="mb-3 text-white">
-            <label for="exampleFormControlInput1" class="form-label">Ваша почта</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <!-- FAQ -->
+    <div class="container mb-5">
+      <h2 class="mb-4">Частые вопросы</h2>
+      
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Какова гарантия на игровые приставки?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Все консоли имеют официальную гарантию производителя на 12 месяцев.
+            </div>
+          </div>
         </div>
-        <div class="mb-3 text-white">
-            <label for="exampleFormControlTextarea1" class="form-label">Ваше сообщение</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Введите сообщение..."></textarea>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Какие варианты доставки доступны?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Доставка по всей России: курьерская доставка, почта России, пункты выдачи.
+            </div>
+          </div>
         </div>
-        <div class="mb-3 text-white align-items-end">
-            <button class="btn btn-primary">Отправить</button>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Можно ли вернуть или обменять товар?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Да, в течение 14 дней с момента покупки.
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
+    <!-- Contact Form -->
+    <div class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h2 class="mb-3">Свяжитесь с нами</h2>
+            <p>Есть вопросы? Напишите нам.</p>
+            <p>Телефон: 8 (800) 555-35-35</p>
+            <p>Email: support@gamershop.ru</p>
+          </div>
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Ваше имя</label>
+                <input type="text" class="form-control" placeholder="Имя">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email адрес</label>
+                <input type="email" class="form-control" placeholder="email@example.com">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Сообщение</label>
+                <textarea class="form-control" rows="3" placeholder="Ваше сообщение..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Отправить
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>GamerShop</h4>
+            <p class="text-muted">© 2024 Магазин игровых приставок</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-white me-3">VK</a>
+            <a href="#" class="text-white">Telegram</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+      <div class="modal-dialog">
         <div class="modal-content">
-        <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Ошибка!</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            Ваше текущее местоположение не позволяет оформить заказ. <br> Попробуйте отключить прокси-сервисы и VPN.
-        </div>
-        <div class="modal-footer">
+          <div class="modal-header">
+            <h5 class="modal-title">Товар добавлен в корзину</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>Консоль добавлена в вашу корзину.</p>
+          </div>
+          <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-            <button type="button" class="btn btn-primary">Обратиться в поддержку</button>
+            <button type="button" class="btn btn-primary">Оформить заказ</button>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
